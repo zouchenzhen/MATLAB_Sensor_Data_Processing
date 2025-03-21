@@ -144,25 +144,29 @@ end
 
 ```
 光纤传感器数据处理工具集/
-├── UI_txt_csv.m              # TXT文件转CSV工具（带GUI）
-├── UI.m                      # 信号滤波与极小值提取工具（带GUI）
-├── txt_csv_pro.m             # TXT文件转CSV工具（命令行版本）
-├── auto_filter_min_saved_pro.m # 信号滤波与极小值提取工具（命令行版本）
-├── auto_filter_min_saved.m   # 极小值提取工具（NaN输出版本）
-├── auto_filter_min_output.m  # 极小值提取工具（命令行输出版本）
-├── auto_filter_file.m        # 基础滤波处理工具
-├── csv_pre_delete.m          # 数据预处理工具
-├── old_filter_pro.m          # 旧版滤波工具（参考用）
-├── old_filter.m              # 旧版基础滤波工具
-├── old_min.m                 # 旧版极小值提取工具
-├── txt_excel.m               # TXT文件转Excel工具
-└── README.md                 # 项目说明文档
+├── UI_txt_csv.m                 # TXT文件转CSV工具（带GUI）
+├── UI.m                         # 信号滤波与极小值提取工具（带GUI）
+├── txt_csv_pro.m                # TXT文件转CSV工具（命令行版本）
+├── auto_filter_min_saved_pro.m  # 信号滤波与极小值提取工具（命令行版本）
+├── auto_filter_min_saved.m      # 极小值提取工具（NaN输出版本）
+├── auto_filter_min_output.m     # 极小值提取工具（命令行输出版本）
+├── auto_filter_file.m           # 基础滤波处理工具
+├── csv_pre_delete.m             # 数据预处理工具
+├── old_filter_pro.m             # 旧版滤波工具（参考用）
+├── old_filter.m                 # 旧版基础滤波工具
+├── old_min.m                    # 旧版极小值提取工具
+├── txt_excel.m                  # TXT文件转Excel工具
+├── 10-119.txt                   # TXT文件转Excel工具
+├── txt_csv.csv                  # TXT文件转Excel工具
+├── txt_csvfiltered.csv          # TXT文件转Excel工具
+├── z_光源_1500_1550.txt         # TXT文件转Excel工具
+└── README.md                    # 项目说明文档
 ```
 
 ## 使用说明
 
 ### 环境要求
-- MATLAB R2023b或更高版本
+- 作者本人使用的是MATLAB R2023b版本（考虑到代码兼容性，建议不要低于此版本）
 - 无需额外工具箱
 
 ### TXT文件转CSV工具使用方法
@@ -185,6 +189,117 @@ end
    - 绘图选项：选择只绘制第一个时域图或全部图像
 3. 点击"执行滤波处理"按钮开始处理
 4. 处理完成后，结果将保存为指定的CSV文件，并显示原始信号与滤波后信号的对比图
+
+### 命令行版TXT文件转CSV工具使用方法 (txt_csv_pro.m)
+
+1. 打开`txt_csv_pro.m`文件
+2. 修改以下参数：
+   ```matlab
+   folderPath = '您的TXT文件夹路径';
+   outputFilePath = '您的输出CSV文件路径';
+   ```
+3. 运行脚本
+4. 处理完成后，结果将保存为指定的CSV文件
+
+### TXT转Excel工具使用方法 (txt_excel.m)
+
+1. 打开`txt_excel.m`文件
+2. 修改以下参数：
+   ```matlab
+   file=dir('您的TXT文件夹路径\*.txt');
+   save 您的输出Excel文件路径.csv -ascii data;
+   ```
+3. 运行脚本
+4. 处理完成后，结果将保存为指定的CSV文件（可用Excel打开）
+
+### 数据预处理工具使用方法 (csv_pre_delete.m)
+
+1. 打开`csv_pre_delete.m`文件
+2. 修改以下参数：
+   ```matlab
+   folderPath = '您的文件夹路径';
+   inputFileName = '您的输入CSV文件名.csv';
+   outputFileName = '您的输出CSV文件名.csv';
+   sourceFileName = '光源文件名.txt';
+   ```
+3. 运行脚本
+4. 处理完成后，脚本将：
+   - 删除CSV文件前256行
+   - 删除从第3列开始的奇数列
+   - 插入光源数据作为第二列
+   - 将结果保存为指定的CSV文件
+
+### 命令行版信号滤波与极小值提取工具使用方法 (auto_filter_min_saved_pro.m)
+
+1. 打开`auto_filter_min_saved_pro.m`文件
+2. 修改以下参数：
+   ```matlab
+   folderPath = '您的文件夹路径';
+   inputFileName = '您的输入CSV文件名.csv';
+   outputFileName = '您的输出CSV文件名.csv';
+   fc = 8;  % 滤波器截止频率
+   p = 1;   % 是否只画一个时域图 (1: 只画第一个, 0: 画所有的)
+   ```
+3. 运行脚本
+4. 处理完成后，结果将保存为指定的CSV文件，并显示原始信号与滤波后信号的对比图
+
+### NaN输出极小值版本工具使用方法 (auto_filter_min_saved.m)
+
+1. 打开`auto_filter_min_saved.m`文件
+2. 修改以下参数：
+   ```matlab
+   folderPath = '您的文件夹路径';
+   outputFilePath = fullfile(folderPath, '您的输出CSV文件名.csv');
+   filePath = fullfile(folderPath, '您的输入CSV文件名.csv');
+   fc = 18;  % 滤波器截止频率（默认为18）
+   ```
+3. 运行脚本
+4. 处理完成后，结果将保存为指定的CSV文件，极小值将以NaN形式在原位置标记
+
+### 命令行输出极小值版本工具使用方法 (auto_filter_min_output.m)
+
+1. 打开`auto_filter_min_output.m`文件
+2. 修改以下参数：
+   ```matlab
+   folderPath = '您的文件夹路径';
+   outputFilePath = fullfile(folderPath, '您的输出CSV文件名.csv');
+   filePath = fullfile(folderPath, '您的输入CSV文件名.csv');
+   fc = 18;  % 滤波器截止频率（默认为18）
+   ```
+3. 运行脚本
+4. 处理完成后，结果将保存为指定的CSV文件，并在命令窗口中输出每个极小值的波长和光强（保留两位小数）
+
+### 基础滤波处理工具使用方法 (auto_filter_file.m)
+
+1. 打开`auto_filter_file.m`文件
+2. 修改以下参数：
+   ```matlab
+   folderPath = '您的文件夹路径';
+   outputFilePath = fullfile(folderPath, '您的输出CSV文件名.csv');
+   filePath = fullfile(folderPath, '您的输入CSV文件名.csv');
+   fc = 18;  % 滤波器截止频率（默认为18）
+   ```
+3. 运行脚本
+4. 处理完成后，结果将保存为指定的CSV文件，并显示原始信号与滤波后信号的对比图
+
+### 旧版滤波工具使用方法 (old_filter_pro.m)
+
+1. 打开`old_filter_pro.m`文件
+2. 修改以下参数：
+   ```matlab
+   raw_data = '您的光源数据';  % 粘贴数据，使用空格分隔
+   ```
+3. 运行脚本
+4. 处理完成后，将显示原始信号、傅里叶变换、滤波后信号和滤波后信号的傅里叶变换
+
+### 完整数据处理流程建议
+
+对于完整的数据处理流程，建议按以下顺序使用工具：
+
+1. 使用`UI_txt_csv.m`或`txt_csv_pro.m`将TXT文件转换为CSV文件
+2. 使用`csv_pre_delete.m`对CSV文件进行预处理
+3. 使用`UI.m`或`auto_filter_min_saved_pro.m`对预处理后的数据进行滤波和极小值提取
+4. 根据需要，使用`auto_filter_min_output.m`查看具体的极小值波长和光强
 
 ## 开发心得
 
