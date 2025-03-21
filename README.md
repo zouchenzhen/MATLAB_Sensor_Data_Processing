@@ -148,8 +148,14 @@ end
 ├── UI.m                      # 信号滤波与极小值提取工具（带GUI）
 ├── txt_csv_pro.m             # TXT文件转CSV工具（命令行版本）
 ├── auto_filter_min_saved_pro.m # 信号滤波与极小值提取工具（命令行版本）
+├── auto_filter_min_saved.m   # 极小值提取工具（NaN输出版本）
+├── auto_filter_min_output.m  # 极小值提取工具（命令行输出版本）
+├── auto_filter_file.m        # 基础滤波处理工具
 ├── csv_pre_delete.m          # 数据预处理工具
 ├── old_filter_pro.m          # 旧版滤波工具（参考用）
+├── old_filter.m              # 旧版基础滤波工具
+├── old_min.m                 # 旧版极小值提取工具
+├── txt_excel.m               # TXT文件转Excel工具
 └── README.md                 # 项目说明文档
 ```
 
@@ -212,11 +218,11 @@ end
 
 ## 特别鸣谢
 
--实验室各位学长学姐：杨冠、杨凡、郭家明、宋瑶佳
+- 实验室各位学长学姐：杨冠、杨凡、郭家明、宋瑶佳
 
 ## 开源文档撰写日期
 
--2025/03/21
+- 2025/03/21
 
 ## 许可证
 
