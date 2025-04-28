@@ -7,17 +7,11 @@
 项目开发始于2024年6月（作者本人当时处于大二下学期），解决了实验室原有代码老旧、功能不全、操作繁琐等问题，极大地提高了传感器开发测试的速度。
 
 ## 功能演示图
-![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_txt_csv.jpg)
-![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config.jpg)
-![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config_final.jpg)
-![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/final.jpg)
 
--test
-
-<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config.jpg" alt="UI 界面" width="1000"/>
-<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config_final.jpg" alt="UI 界面" width="1000"/>
-<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_txt_csv.jpg" alt="自动更新配置" width="800"/>
-<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/final.jpg" alt="自动更新配置" width="800"/>
+<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config.jpg" alt="UI 界面 自动保存配置" width="1000"/>
+<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config_final.jpg" alt="UI 界面 自动保存配置 处理结果" width="1000"/>
+<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_txt_csv.jpg" alt="UI 界面 txt转csv文件格式" width="800"/>
+<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/final.jpg" alt="最终处理结果" width="800"/>
 
 
 ## 主要功能
