@@ -6,6 +6,12 @@
 
 项目开发始于2024年6月（作者本人当时处于大二下学期），解决了实验室原有代码老旧、功能不全、操作繁琐等问题，极大地提高了传感器开发测试的速度。
 
+## 功能演示图
+![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_txt_csv.jpg)
+![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config.jpg)
+![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config_final.jpg)
+![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/final.jpg)
+
 ## 主要功能
 
 本工具集包含以下主要功能模块：
