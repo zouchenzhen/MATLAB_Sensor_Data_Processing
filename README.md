@@ -12,6 +12,14 @@
 ![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config_final.jpg)
 ![image](https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/final.jpg)
 
+-test
+
+<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config.jpg" alt="UI 界面" width="400" height="300"/>
+<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_auto_update_config_final.jpg" alt="UI 界面" width="400" height="300"/>
+<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/UI_txt_csv.jpg" alt="自动更新配置" width="400"/>
+<img src="https://github.com/zouchenzhen/MATLAB_Sensor_Data_Processing/blob/main/img/final.jpg" alt="自动更新配置" width="400"/>
+
+
 ## 主要功能
 
 本工具集包含以下主要功能模块：
